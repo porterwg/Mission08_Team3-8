@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\je7er\\source\\repos\\Mission08_Team3-8\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FA41F34C-2200-420A-89C7-3718BC8933A0}|Mission08_Team3-8\\Mission08_Team3-8.csproj|c:\\users\\je7er\\source\\repos\\mission08_team3-8\\mission08_team3-8\\views\\home\\quadrant.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FA41F34C-2200-420A-89C7-3718BC8933A0}|Mission08_Team3-8\\Mission08_Team3-8.csproj|solutionrelative:mission08_team3-8\\views\\home\\quadrant.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Quadrant.cshtml",
+              "DocumentMoniker": "C:\\Users\\je7er\\Source\\Repos\\Mission08_Team3-8\\Mission08_Team3-8\\Views\\Home\\Quadrant.cshtml",
+              "RelativeDocumentMoniker": "Mission08_Team3-8\\Views\\Home\\Quadrant.cshtml",
+              "ToolTip": "C:\\Users\\je7er\\Source\\Repos\\Mission08_Team3-8\\Mission08_Team3-8\\Views\\Home\\Quadrant.cshtml*",
+              "RelativeToolTip": "Mission08_Team3-8\\Views\\Home\\Quadrant.cshtml*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-26T21:38:32.412Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

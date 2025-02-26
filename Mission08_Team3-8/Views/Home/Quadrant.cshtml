@@ -1,0 +1,126 @@
+﻿@model IEnumerable<TaskModel>
+
+@{
+    ViewData["Title"] = "Time Management Matrix";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F3D9B1;
+            color: #2F2F2F;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #D49530;
+        }
+
+        .matrix {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto;
+            gap: 10px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .quadrant {
+            background-color: white;
+            border: 2px solid #D15645;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .quadrant h2 {
+            color: #2F4858;
+            text-align: center;
+        }
+
+        .task {
+            background-color: #F3D9B1;
+            border: 1px solid #317B77;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        .task.completed {
+            background-color: #D4E6C0;
+            text-decoration: line-through;
+        }
+
+        .task-category {
+            font-size: 0.9em;
+            color: #317B77;
+        }
+
+        .task-date {
+            font-size: 0.8em;
+            color: #D15645;
+        }
+    </style>
+</head>
+<body>
+    <h1>Time Management Matrix</h1>
+
+    <div class="matrix">
+        <div class="quadrant" id="q1">
+            <h2>Quadrant I<br><small>Important / Urgent</small></h2>
+            @foreach (var task in Model.Where(t => t.Quadrant == "I"))
+            {
+                <div class="task @(task.Completed ? "completed" : "")">
+                    <strong>@task.TaskName</strong>
+                    <div class="task-category">@task.Category</div>
+                    <div class="task-date">Due: @task.DueDate.ToShortDateString()</div>
+                </div>
+            }
+        </div>
+
+        <div class="quadrant" id="q2">
+            <h2>Quadrant II<br><small>Important / Not Urgent</small></h2>
+            @foreach (var task in Model.Where(t => t.Quadrant == "II"))
+            {
+                <div class="task @(task.Completed ? "completed" : "")">
+                    <strong>@task.TaskName</strong>
+                    <div class="task-category">@task.Category</div>
+                    <div class="task-date">Due: @task.DueDate.ToShortDateString()</div>
+                </div>
+            }
+        </div>
+
+        <div class="quadrant" id="q3">
+            <h2>Quadrant III<br><small>Not Important / Urgent</small></h2>
+            @foreach (var task in Model.Where(t => t.Quadrant == "III"))
+            {
+                <div class="task @(task.Completed ? "completed" : "")">
+                    <strong>@task.TaskName</strong>
+                    <div class="task-category">@task.Category</div>
+                    <div class="task-date">Due: @task.DueDate.ToShortDateString()</div>
+                </div>
+            }
+        </div>
+
+        <div class="quadrant" id="q4">
+            <h2>Quadrant IV<br><small>Not Important / Not Urgent</small></h2>
+            @foreach (var task in Model.Where(t => t.Quadrant == "IV"))
+            {
+                <div class="task @(task.Completed ? "completed" : "")">
+                    <strong>@task.TaskName</strong>
+                    <div class="task-category">@task.Category</div>
+                    <div class="task-date">Due: @task.DueDate.ToShortDateString()</div>
+                </div>
+            }
+        </div>
+    </div>
+</body>
+</html>
